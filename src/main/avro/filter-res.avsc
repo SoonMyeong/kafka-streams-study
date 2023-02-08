@@ -1,0 +1,11 @@
+{
+    "namespace": "com.streams.kafka.model",
+    "name": "FilterRes",
+    "type": "record",
+    "fields": [
+      {
+        "name": "retweet",
+        "type": "boolean"
+      }
+    ]
+  }
