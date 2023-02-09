@@ -6,6 +6,10 @@
       {
         "name": "retweet",
         "type": "boolean"
+      },
+      {
+        "name" : "text",
+        "type" : "string"
       }
     ]
   }
