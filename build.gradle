@@ -2,7 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '2.7.2'
     id 'io.spring.dependency-management' version '1.1.0'
-    id 'com.commercehub.gradle.plugin.avro' version '0.9.1'
+    id 'com.github.davidmc24.gradle.plugin.avro' version '1.5.0'
 }
 
 group = 'com.streams'
@@ -19,12 +19,14 @@ repositories {
     mavenCentral()
 }
 
+avro {
+    fieldVisibility = 'PRIVATE'
+}
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.kafka:spring-kafka'
     implementation 'org.apache.kafka:kafka-streams'
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.1'
 
     // required for registryless Avro
     implementation 'org.apache.avro:avro:1.11.0'
